@@ -1,0 +1,21 @@
+{
+  "name": "@pkg/root",
+  "private": true,
+  "scripts": {
+    "docker:build": "docker build -f pkgs/pkg-a/Dockerfile . -t turbo-prune:latest"
+  },
+  "workspaces": [
+    "./pkgs/*"
+  ],
+  "devDependencies": {},
+  "packageManager": "bun@1.2.13",
+  "module": "index.ts",
+  "type": "module",
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@types/bun": "^1.2.13",
+    "turbo": "^2.5.3"
+  }
+}
